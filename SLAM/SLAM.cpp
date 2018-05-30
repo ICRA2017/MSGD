@@ -27,6 +27,8 @@
 using namespace MathLib;
 #endif
 
+REALTYPE Vector::undef = R_ZERO;
+
 void SLAM::
 Print
     (string name)
