@@ -4,7 +4,7 @@ DIRS	= MathLib SLAM
 EXE	= msgd
 OBJS	= main.o
 OBJLIBS	= libmath.a libslam.a 
-LIBS	= -L. -lmath -lslam
+LIBS	= -L. -llibmath -llibslam
 
 all : $(EXE)
 
