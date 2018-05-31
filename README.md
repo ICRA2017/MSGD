@@ -2,8 +2,6 @@
 
 [![Build Status](https://travis-ci.org/ICRA2017/MSGD.svg?branch=reproducible)](https://travis-ci.org/ICRA2017/MSGD)
 
-[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/ICRA2017/MSGD/reproducible)
-
 **Authors:** [Chao Gao](https://www.cl.cam.ac.uk/research/dtg/www/people/cg500/)
 
 **Current version:** 1.0.0 
