@@ -29,3 +29,41 @@ cd MSGD
 make all
 ./msgd -in ./datasets/input_g2o_file_name.g2o -out result_folder_path
 ```
+### Run in Docker
+```
+$ docker run -it --rm icra2017/msgd /bin/bash
+root@58de5d3a2e43:/# cd MSGD
+root@58de5d3a2e43:/MSGD# mkdir result_folder
+root@58de5d3a2e43:/MSGD# ./msgd -in ./datasets/WGB2a-1.g2o -out result_folder/
+
+MSGD Copyright (C) 2015-2017 Chao Gao, University of Cambridge.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+*******************************************************************
+ Input File                                      = ./datasets/WGB2a-1.g2o
+ Output Folder                                   = result_folder/
+ Iterations                                      = 100
+ Show Progress                                   = No
+ Enable Edge Randomnization                      = Yes
+ Set Constraint Covariances to Idendity Matrix   = No
+ Save Result Graph For Every Iteration           = No
+*******************************************************************
+
+Load data from file ... 
+Done
+Number of Poses: 26262
+Number of Constraints: 10382
+Number of Mini-batches: 29
+Saving graph: initial
+Done.
+
+Before Optimization:  global error = 2.68694e+06   error/constraint = 258.808
+**** Optimization Start ****
+**** Optimization Done ****
+After Optimization:  global error = 36385.6   error/constraint = 3.50468
+Total Time = 1.49264 s.
+Saving graph: final
+Done.
+```
