@@ -1,13 +1,14 @@
 # MSGD
 
-[![Build Status](https://travis-ci.org/ICRA2017/MSGD.svg?branch=reproducible)](https://travis-ci.org/ICRA2017/MSGD)
+[![Travis CI Build Status](https://travis-ci.org/ICRA2017/MSGD.svg?branch=reproducible)](https://travis-ci.org/ICRA2017/MSGD)
+
+[![Docker Build Status](https://dockerbuildbadges.quelltext.eu/status.svg?organization=icra2017&repository=msgd)](https://hub.docker.com/r/icra2017/msgd/builds/) 
 
 **Authors:** [Chao Gao](https://www.cl.cam.ac.uk/research/dtg/www/people/cg500/)
 
 **Current version:** 1.0.0 
 
 MSGD is a scalable back-end for indoor magnetic field-based graphslam. Please refert to the related publication below for details.
-
 
 ### Related Publication:
 Chao Gao and Robert Harle. **Msgd: Scalable back-end for indoor magnetic field-based graphslam**. In *Robotics and Automation (ICRA), 2017 IEEE International Conference on*. IEEE, 2017.
