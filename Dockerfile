@@ -1,6 +1,3 @@
-# 7989444
-# https://github.com/chaogao-cam/MSGD
-
 FROM ubuntu:14.04
 
 RUN apt-get update && apt-get install -y \
