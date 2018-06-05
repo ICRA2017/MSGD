@@ -1,7 +1,6 @@
 # MSGD
 
 [![Travis CI Build Status](https://travis-ci.org/ICRA2017/MSGD.svg?branch=reproducible)](https://travis-ci.org/ICRA2017/MSGD)
-
 [![Docker Build Status](https://dockerbuildbadges.quelltext.eu/status.svg?organization=icra2017&repository=msgd)](https://hub.docker.com/r/icra2017/msgd/builds/) 
 
 **Authors:** [Chao Gao](https://www.cl.cam.ac.uk/research/dtg/www/people/cg500/)
