@@ -5,17 +5,13 @@ services:
 
 env:
   global:
-  - secure: f7r0ROZwsT9+nTd7GdsH3A2mjI4dUiqAriaESOPN7T3LYEuDM3uUGzdQFfkWrxy+LwrhED6ZZ6ixoEjaJZwHpPltLv0pI0/uuOO6eMKUKO3tZz0Fh5fykKORHDX8PgcjrjfeEdeevV6QAXQt0eEcmr0Gqrzpxl4MxKK7nmzKxQtwJBIEBTpfYas72bYDtoXmg7CCSaS2Lro7DNYbUr3/JGhE+E76a2wjs4tfexk+Wn0S8ElNks03rAXt8zOWxskx8WbzBX63ZDW+/6y75eaTgtKqCAx9TDTYqk67kTPidM1Z2sDG93utgUWlG+XwASOcuRIH9d5Fm6xQ8aLg7hhXYD8adznMWjxpD9okkgwn/FB+TvtyuNvLKFUHb6d3O6e4JSFRLd/DRobPr/k/KL9yNI8cPdzoVo9EsRTN6+yl6jr1PqdWWieReUKgIu1TVBLj1bycMv9HJZvKmdH7OFPcXyphPyh0boy22/kis0VS8IaijG+mdnaN1oufShXBrwpO3yOtFj8aFav2VKe+3XOftU9H2Vw4b2nW1+VfymxrduMrrAxK30npKqtX3iQ7nRK+x4Z4Jtnh5WceDl9kOYRoHbNhkRWaT3OCVd6VrtTtuSntVKFwEW6dS8moAGkBrfpqlmkRtqEa/3Y99xSrD4/zsqsK5pX1Ru4hRopm7UqnwnM=
   - secure: BV5EU1Zv9M7aKAvQ/4KqZygCR5azREL1mTOsLWdQK+Qqc1Q2J0n0V50LrNR6FFa/BQvZ37AFL+OeqswJMJOmGNzcg4swbBH52ds7bjyn4IIrb9kuUOAvz8H1GxBZIFf+viuhSrXlbFUDHNKAYPV8IDW6n+VjwLSbCQc5B0RaAyBp9w5mSKN20YDv6uNjRN2a/Ob6Y1O1QO+LS0X6SiQ+e5D3ukAgM7IuWlqC78LDSvnFnMpu9341hE8bji3Tf0kSBGQIG91ZbrbWRFOSvchHp6AfOfQJME6y7bITBd4E2LvrH5fjCg2KJ2NEyAYO78cHBPLmo8/wP1cFFCYbfSW0kqCak3JbZ56YgaVPCrwozGirwogJWigXvUxAi6v6ESdeBg4pkUKfICWDS9IIi9PunO8x9LehBWt5bUNvfn5EzekQI7qfBTzJ7LvFgdhsR8p+Az/HeP8qJcUIp2ttATExq0p8fnpDOIkdtbBuMmzGSAdv7dwH2V/e/VtSKkxhmngHtimgFdpf+udVIHqLSJHU6EXMl9kFEEFRwZ/ncDu0qF2mLyMlzQ4eAFoZlcuEL7g6ZkXbp/zDHaLuF4LEobW5MpYgSxhO49qjisTMDDd1F6wqahTyVHBP5CFVfJm0hv+T6g0nO9AbdDeoU1bPVYGevFzatyWkyLDys6OGGyb2hhg=
 
 script:
   - docker build -t icra2017/msgd .
   
-after_script:
-  - docker images
-  
 before_deploy:
-  - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
+  - docker login -u "icra2017" -p "$DOCKER_PASSWORD"
 deploy:
   provider: script
   script: docker push icra2017/msgd
