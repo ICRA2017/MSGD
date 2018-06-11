@@ -1,7 +1,5 @@
 sudo: required
 
-language: cpp
-
 services:
   - docker
 	
@@ -11,4 +9,15 @@ env:
   - secure: BV5EU1Zv9M7aKAvQ/4KqZygCR5azREL1mTOsLWdQK+Qqc1Q2J0n0V50LrNR6FFa/BQvZ37AFL+OeqswJMJOmGNzcg4swbBH52ds7bjyn4IIrb9kuUOAvz8H1GxBZIFf+viuhSrXlbFUDHNKAYPV8IDW6n+VjwLSbCQc5B0RaAyBp9w5mSKN20YDv6uNjRN2a/Ob6Y1O1QO+LS0X6SiQ+e5D3ukAgM7IuWlqC78LDSvnFnMpu9341hE8bji3Tf0kSBGQIG91ZbrbWRFOSvchHp6AfOfQJME6y7bITBd4E2LvrH5fjCg2KJ2NEyAYO78cHBPLmo8/wP1cFFCYbfSW0kqCak3JbZ56YgaVPCrwozGirwogJWigXvUxAi6v6ESdeBg4pkUKfICWDS9IIi9PunO8x9LehBWt5bUNvfn5EzekQI7qfBTzJ7LvFgdhsR8p+Az/HeP8qJcUIp2ttATExq0p8fnpDOIkdtbBuMmzGSAdv7dwH2V/e/VtSKkxhmngHtimgFdpf+udVIHqLSJHU6EXMl9kFEEFRwZ/ncDu0qF2mLyMlzQ4eAFoZlcuEL7g6ZkXbp/zDHaLuF4LEobW5MpYgSxhO49qjisTMDDd1F6wqahTyVHBP5CFVfJm0hv+T6g0nO9AbdDeoU1bPVYGevFzatyWkyLDys6OGGyb2hhg=
 
 script:
-  - docker build -t MSGD .
+  - docker build -t icra2017/MSGD .
+  
+after_script:
+  - docker images
+  
+before_deploy:
+  - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
+deploy:
+  provider: script
+  script: docker push icra2017/MSGD
+  on:
+    branch: reproducible
